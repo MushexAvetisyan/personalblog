@@ -50,12 +50,20 @@ class PostController extends Controller
         return redirect()->route('posts.index')->with('success', 'Post created successfully.');
     }
 
-    public function show(Post $post)
+    /**
+     * @param Post $post
+     * @return View
+     */
+    public function show(Post $post): View
     {
         return view('posts.show', compact('post'));
     }
 
-    public function edit(Post $post)
+    /**
+     * @param Post $post
+     * @return View
+     */
+    public function edit(Post $post): View
     {
         if ($post->user_id !== Auth::id()) {
             abort(403);
@@ -63,7 +71,12 @@ class PostController extends Controller
         return view('posts.edit', compact('post'));
     }
 
-    public function update(PostRequest $request, Post $post)
+    /**
+     * @param PostRequest $request
+     * @param Post $post
+     * @return RedirectResponse
+     */
+    public function update(PostRequest $request, Post $post): RedirectResponse
     {
         $request->validated();
 
@@ -79,7 +92,11 @@ class PostController extends Controller
         return redirect()->route('posts.index')->with('success', 'Post updated successfully.');
     }
 
-    public function destroy(Post $post)
+    /**
+     * @param Post $post
+     * @return RedirectResponse
+     */
+    public function destroy(Post $post): RedirectResponse
     {
         if ($post->user_id !== Auth::id()) {
             abort(403);
