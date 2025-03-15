@@ -1,6 +1,6 @@
 <header class="header" id="header-menu" data-header>
     <div class="container">
-        <a href="{{ url('/') }}" class="logo"><img src="{{ asset('images/LogoInfinity.png') }}" width="200" height="40" alt="LearnItLogo"></a>
+        <a href="{{ url('/') }}" class="logo">PersonalBlog</a>
         <nav role="navigation" class="navbar primary-navigation active" data-navbar>
             <ul class="navbar-list">
                 <li><a href="{{ url('/') }}" class="navbar-link hover-1" data-nav-toggler>Home</a></li>
