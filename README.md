@@ -48,4 +48,4 @@ Follow the steps below to set up this project locally.
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/simple-blog-system.git
+git clone  https://github.com/MushexAvetisyan/personalblog.git
